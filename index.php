@@ -17,10 +17,7 @@ $res = $client->request('GET', $url . urlencode($_GET['query']));
 
 $json = $res->getBody();
 
-// echo $json;
-
 $data = json_decode($json, true);
-// var_dump($data);
 
 foreach($data['results'] as $item) {
     echo "<p>";
